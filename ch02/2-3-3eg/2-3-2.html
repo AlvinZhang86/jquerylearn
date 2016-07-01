@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-3-2</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var item = document.getElementById("tb");
+
+            var tbody = item.getElementsByTagName("tbody")[0];
+            var trs = tbody.getElementsByTagName("tr");
+            for (var i=0; i< trs.length; i++) {  // 把偶数行的背景色改掉
+                if(i%2==0) {
+                    trs[i].style.backgroundColor="#888";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<table id="tb">
+    <tbody>
+    <tr><td>第1行</td><td>第1行</td></tr>
+    <tr><td>第2行</td><td>第2行</td></tr>
+    <tr><td>第3行</td><td>第3行</td></tr>
+    <tr><td>第4行</td><td>第4行</td></tr>
+    <tr><td>第5行</td><td>第5行</td></tr>
+    <tr><td>第6行</td><td>第6行</td></tr>
+    </tbody>
+</table>
+</body>
+</html>
