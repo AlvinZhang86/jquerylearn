@@ -2,20 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>3-3-1</title>
+    <title>3-4-1</title>
     <script type="text/javascript" src="../../lib/jquery.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            var $li_1 = $('<li title="香蕉">香蕉</li>');
-            var $li_2 = $('<li title="雪梨">雪梨</li>');
-            var $li_3 = $('<li title="其他">其他</li>');
-
-            var $parent = $("ul");
-
-            var $two_li = $("ul li:eq(1)");
-            $parent.append($li_1);
-            $parent.prepend($li_2);
-            $li_3.insertAfter($two_li);
+            $("ul li:eq(1)").remove();
         });
     </script>
 </head>
