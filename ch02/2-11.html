@@ -8,7 +8,7 @@
         $(document).ready(function () {
             function countChecked() {
                 var n = $("input:checked").length;
-                $("div").eq(3).html("<strong>有" + n + " 个被选中！</strong>");
+                $("div").eq(0).html("<strong>有" + n + " 个被选中！</strong>");
             }
 
             $(":reset").click(function () {
@@ -17,7 +17,7 @@
                     $("select").change();
                 }, 0);
             });
-            
+
             $("#btn1").click(function () {
                 $("#form1 input:enabled").val("这里变化了！");
                 return false;
@@ -25,21 +25,20 @@
 
             $("#btn2").click(function () {
                 $("#form1 input:disabled").val("这里变化了");
+                return false;
             });
 
             $(":checkbox").click(countChecked);
 
             countChecked();
-            
+
             $("select").change(function () {
                 var str = "";
                 $("select :selected").each(function () {
                     str += $(this).text() + ","
                 });
-                $("div").eq(1).html("<strong>你选中的是" + str+ "</strong>");
+                $("div").eq(1).html("<strong>你选中的是" + str + "</strong>");
             }).trigger("change");
-
-
 
 
         });
@@ -49,25 +48,25 @@
 <h3> 表单对象属性过滤选择器.</h3>
 <form id="form1" action="#">
     <button type="reset">重置所有表单元素</button>
-    <br /><br />
+    <br/><br/>
     <button id="btn1">对表单内 可用input 赋值操作.</button>
     <button id="btn2">对表单内 不可用input 赋值操作.</button>
 
-    <br /><br />
+    <br/><br/>
 
     <!-- 测试的元素 -->
 
-    可用元素：<input name="add" value="可用文本框"/>  <br/>
+    可用元素：<input name="add" value="可用文本框"/> <br/>
     不可用元素：<input name="email" disabled="disabled" value="不可用文本框"/><br/>
-    可用元素： <input name="che" value="可用文本框" /><br/>
-    不可用元素：<input name="name" disabled="disabled"  value="不可用文本框"/><br/>
+    可用元素： <input name="che" value="可用文本框"/><br/>
+    不可用元素：<input name="name" disabled="disabled" value="不可用文本框"/><br/>
     <br/>
     多选框：<br/>
-    <input type="checkbox" name="newsletter" checked="checked" value="test1" />test1
-    <input type="checkbox" name="newsletter" value="test2" />test2
-    <input type="checkbox" name="newsletter" value="test3" />test3
-    <input type="checkbox" name="newsletter" checked="checked" value="test4" />test4
-    <input type="checkbox" name="newsletter" value="test5" />test5
+    <input type="checkbox" name="newsletter" checked="checked" value="test1"/>test1
+    <input type="checkbox" name="newsletter" value="test2"/>test2
+    <input type="checkbox" name="newsletter" value="test3"/>test3
+    <input type="checkbox" name="newsletter" checked="checked" value="test4"/>test4
+    <input type="checkbox" name="newsletter" value="test5"/>test5
     <div></div>
 
     <br/><br/>
@@ -83,7 +82,7 @@
 
     <br/><br/>
     下拉列表2：<br/>
-    <select name="test2" >
+    <select name="test2">
         <option>浙江</option>
         <option>湖南</option>
         <option selected="selected">北京</option>

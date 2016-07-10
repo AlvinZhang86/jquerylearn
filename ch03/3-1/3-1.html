@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-1</title>
+    <script type="text/javascript" src="../../lib/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $para = $("p");
+            var $li = $("ul li:eq(1)");
+
+            var p_txt = $para.attr("title");
+            var ul_txt = $li.attr("title");
+
+            var li_txt = $li.text();
+
+            alert(ul_txt);
+            alert(li_txt);
+            alert(p_txt);
+        });
+    </script>
+</head>
+<body>
+<p title="选择你最喜欢的水果.">你最喜欢的水果是?</p>
+<ul>
+    <li title='苹果1'>苹果</li>
+    <li title='橘子1'>橘子</li>
+    <li title='菠萝1'>菠萝</li>
+</ul>
+</body>
+</html>

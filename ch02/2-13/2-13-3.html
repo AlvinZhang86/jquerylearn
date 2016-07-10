@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-13-3</title>
+    <script type="text/javascript" src="../../lib/jquery.min.js"></script>
+    <script language="javascript">
+        $(function () {
+            $("#btn").click(function () {
+                var items = $("input[name='check']:checked");
+                alert("选中的个数为: " + items.length);
+            });
+        });
+
+    </script>
+</head>
+<body>
+<input type="checkbox" value="1" name="check" checked/>
+<input type="checkbox" value="2" name="check"/>
+<input type="checkbox" value="3" name="check" checked/>
+<input type="button" value="测试选中的个数" id="btn"/>
+</body>
+</html>
